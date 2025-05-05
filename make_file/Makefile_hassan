@@ -1,0 +1,11 @@
+output: main2.o message.o
+	g++ main2.o message.o -o output
+
+main2.o: main2.cpp
+	g++ -c main2.cpp
+
+message.o: message.cpp message.h
+	g++ -c message.cpp
+
+clean:
+	rm *.o output
